@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Scaffolds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Micropost</th>
+      <th>Content</th>
+      <th></th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scaffolds.each do |scaffold| %>
+      <tr>
+        <td><%= scaffold.Micropost %></td>
+        <td><%= scaffold.content %></td>
+        <td><%= scaffold. %></td>
+        <td><%= scaffold.user_id %></td>
+        <td><%= link_to 'Show', scaffold %></td>
+        <td><%= link_to 'Edit', edit_scaffold_path(scaffold) %></td>
+        <td><%= link_to 'Destroy', scaffold, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scaffold', new_scaffold_path %>
